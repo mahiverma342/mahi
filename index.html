@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowWithSkills — Freelance Paid Advertising Specialist</title>
+<meta name="description" content="Mahi is a freelance paid advertising specialist helping businesses run targeted, budget-conscious Meta Ads and Google Ads campaigns focused on qualified leads.">
+<meta property="og:title" content="GrowWithSkills — Freelance Paid Advertising Specialist">
+<meta property="og:description" content="Targeted Meta Ads and Google Ads campaigns built around your goals, audience and budget.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14201A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%2314201A'/%3E%3Cpath d='M7 16l4-4 3 3 5-6' stroke='%23BB8A34' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15 8h5v5' stroke='%23BB8A34' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#14201A;
+  --ink-2:#1B2921;
+  --paper:#EFF0E7;
+  --surface:#FFFFFF;
+  --ink-text:#1C2019;
+  --stone:#666C60;
+  --paper-text:#EEEFE6;
+  --stone-2:#9CA398;
+  --pine:#3C5C47;
+  --gold:#BB8A34;
+  --gold-text:#8A5E1E;
+  --border:rgba(20,32,26,.12);
+  --border-dark:rgba(238,240,231,.16);
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --container:1160px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:88px;background:var(--paper);}
+body{font-family:var(--font-body);color:var(--ink-text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font:inherit;background:none;border:none;cursor:pointer;color:inherit;}
+input,textarea,select{font:inherit;color:inherit;}
+h1,h2,h3,h4{line-height:1.2;}
+.container{max-width:var(--container);margin:0 auto;padding:0 1.5rem;}
+@media(min-width:768px){.container{padding:0 2rem;}}
+::selection{background:var(--gold);color:var(--ink);}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+section h2{font-family:var(--font-display);font-weight:500;font-size:clamp(1.9rem,2.6vw + 1rem,2.6rem);color:var(--ink-text);}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.85rem;border:1px solid transparent;font-weight:600;font-size:.94rem;font-family:var(--font-body);transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease;cursor:pointer;}
+.btn-gold{background:var(--gold);color:var(--ink);border-color:var(--gold);}
+.btn-gold:hover{background:#CB9A45;transform:translateY(-2px);}
+.btn-line-invert{border-color:rgba(238,240,231,.4);color:var(--paper-text);}
+.btn-line-invert:hover{background:var(--paper-text);color:var(--ink);border-color:var(--paper-text);}
+.btn-line{border-color:var(--border);color:var(--ink-text);}
+.btn-line:hover{background:var(--ink);color:var(--paper-text);border-color:var(--ink);}
+.btn-block{width:100%;}
+
+/* ============ HEADER / NAV ============ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.6rem 0;transition:background .4s ease,padding .4s ease,box-shadow .4s ease;}
+.site-header.scrolled{background:var(--paper);padding:1.1rem 0;box-shadow:0 1px 0 var(--border);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--paper-text);transition:color .4s ease;}
+.site-header.scrolled .logo{color:var(--ink-text);}
+.logo-mark{width:28px;height:28px;flex-shrink:0;}
+.mark-bg{fill:#14201A;}
+.mark-fg{stroke:#BB8A34;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.nav-desktop{display:none;gap:2.1rem;align-items:center;}
+.nav-desktop a{font-size:.92rem;color:var(--stone-2);font-weight:500;transition:color .3s ease;}
+.site-header.scrolled .nav-desktop a{color:var(--stone);}
+.nav-desktop a:hover{color:var(--paper-text);}
+.site-header.scrolled .nav-desktop a:hover{color:var(--ink-text);}
+.nav-cta{display:none;}
+.menu-toggle{display:flex;flex-direction:column;gap:5px;width:38px;height:38px;align-items:center;justify-content:center;flex-shrink:0;}
+.menu-toggle span{width:20px;height:1.5px;background:var(--paper-text);transition:.3s ease;}
+.site-header.scrolled .menu-toggle span{background:var(--ink-text);}
+.menu-toggle.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.menu-toggle.is-open span:nth-child(2){opacity:0;}
+.menu-toggle.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.site-header.scrolled .menu-toggle.is-open span{background:var(--ink-text);}
+@media(min-width:960px){
+  .nav-desktop{display:flex;}
+  .nav-cta{display:inline-flex;}
+  .menu-toggle{display:none;}
+}
+.nav-mobile{position:fixed;inset:0;background:var(--ink);z-index:999;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.4rem;padding:0 9%;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .35s ease,transform .35s ease,visibility .35s;}
+.nav-mobile.is-open{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-mobile a{font-family:var(--font-display);font-size:1.6rem;color:var(--paper-text);font-weight:500;}
+.nav-mobile .btn{margin-top:1.1rem;}
+
+/* ============ UTILITY UI: progress / cursor / back-to-top ============ */
+.scroll-progress{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--gold);z-index:1100;}
+.cursor-dot{position:fixed;top:0;left:0;width:8px;height:8px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);display:none;}
+.cursor-dot.is-active{display:block;}
+.cursor-dot.is-hover{width:26px;height:26px;background:transparent;border:1.5px solid var(--gold);}
+.back-to-top{position:fixed;right:1.4rem;bottom:1.4rem;width:44px;height:44px;border:1px solid var(--border-dark);background:var(--ink);color:var(--paper-text);display:flex;align-items:center;justify-content:center;z-index:900;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s;}
+.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
+.back-to-top svg{width:18px;height:18px;}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--ink);overflow:hidden;padding:7rem 0 5rem;}
+.hero-frame{position:absolute;inset:6% 5%;pointer-events:none;z-index:1;}
+.frame-corner{position:absolute;width:44px;height:44px;}
+.frame-corner.tl{top:0;left:0;border-top:1.5px solid rgba(238,240,231,.4);border-left:1.5px solid rgba(238,240,231,.4);}
+.frame-corner.tr{top:0;right:0;border-top:1.5px solid rgba(238,240,231,.4);border-right:1.5px solid rgba(238,240,231,.4);}
+.frame-corner.bl{bottom:0;left:0;border-bottom:1.5px solid rgba(238,240,231,.4);border-left:1.5px solid rgba(238,240,231,.4);}
+.frame-corner.br{bottom:0;right:0;border-bottom:1.5px solid rgba(238,240,231,.4);border-right:1.5px solid rgba(238,240,231,.4);}
+.frame-reticle{position:absolute;right:6%;bottom:9%;width:92px;height:92px;animation:reticlePulse 5s ease-in-out infinite;}
+.frame-reticle svg{width:100%;height:100%;}
+@keyframes reticlePulse{0%,100%{transform:scale(1);opacity:.55;}50%{transform:scale(1.06);opacity:.85;}}
+.hero-inner{position:relative;z-index:2;}
+.hero-content{max-width:640px;}
+.hero-kicker{color:var(--gold);font-size:.92rem;font-weight:500;margin-bottom:1.4rem;}
+.hero-title{font-family:var(--font-display);font-weight:500;color:var(--paper-text);font-size:clamp(2.3rem,3.6vw + 1.3rem,3.9rem);line-height:1.12;letter-spacing:-.01em;margin-bottom:1.5rem;}
+.hero-sub{color:var(--stone-2);font-size:1.13rem;line-height:1.65;max-width:480px;margin-bottom:2.2rem;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2.3rem;}
+.trust-line{color:var(--stone-2);font-size:.86rem;}
+.trust-line .dot{margin:0 .55rem;opacity:.45;}
+.scroll-hint{position:absolute;left:50%;bottom:2rem;transform:translateX(-50%);color:var(--stone-2);z-index:2;animation:scrollBounce 2.2s ease-in-out infinite;}
+.scroll-hint svg{width:16px;height:16px;}
+@keyframes scrollBounce{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,6px);}}
+@media(max-width:640px){
+  .frame-corner{width:28px;height:28px;}
+  .frame-reticle{width:60px;height:60px;right:6%;bottom:13%;}
+  .hero{padding:6.5rem 0 4rem;}
+}
+
+/* ============ ABOUT ============ */
+.about{background:var(--paper);padding:6.5rem 0;}
+.about-grid{display:grid;gap:3rem;grid-template-columns:1fr;}
+@media(min-width:900px){.about-grid{grid-template-columns:1.35fr .9fr;gap:4.5rem;}}
+.about-copy h2{margin-bottom:1.4rem;}
+.about-copy p{color:var(--stone);font-size:1.05rem;line-height:1.75;margin-bottom:1.1rem;max-width:560px;}
+.about-copy p:first-of-type{color:var(--ink-text);font-size:1.15rem;}
+.about-values{border-top:1px solid var(--border);padding-top:1.8rem;}
+.about-values h3{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink-text);margin-bottom:1.3rem;}
+.value-row{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--border);}
+.value-row:last-child{border-bottom:none;}
+.value-icon{width:20px;height:20px;color:var(--pine);flex-shrink:0;margin-top:.15rem;}
+.value-row span{color:var(--ink-text);font-size:.98rem;font-weight:500;}
+
+/* ============ SERVICES ============ */
+.services{background:var(--paper);padding:6.5rem 0;border-top:1px solid var(--border);}
+.services-head{max-width:600px;margin-bottom:3rem;}
+.services-grid{display:grid;gap:1.3rem;grid-template-columns:1fr;margin-bottom:1.3rem;}
+@media(min-width:860px){.services-grid{grid-template-columns:1fr 1fr;}}
+.service-card{padding:2.4rem;border:1px solid var(--border);}
+.service-card--pine{background:var(--pine);border-color:var(--pine);}
+.service-card--ink{background:var(--ink);border-color:var(--ink);}
+.service-card--pine h3,.service-card--pine p,.service-card--ink h3,.service-card--ink p{color:var(--paper-text);}
+.service-card--pine .service-icon,.service-card--ink .service-icon{color:var(--gold);}
+.service-card--pine .tag,.service-card--ink .tag{border-color:var(--border-dark);color:var(--stone-2);}
+.service-icon{width:28px;height:28px;color:var(--pine);margin-bottom:1.3rem;}
+.service-card h3{font-family:var(--font-display);font-weight:600;font-size:1.35rem;color:var(--ink-text);margin-bottom:.7rem;}
+.service-card p{color:var(--stone);font-size:.98rem;line-height:1.6;margin-bottom:1.4rem;}
+.tag-row{display:flex;flex-wrap:wrap;gap:.5rem;}
+.tag{font-size:.8rem;padding:.35rem .75rem;border:1px solid var(--border);color:var(--stone);}
+.services-grid-sub{display:grid;gap:1.3rem;grid-template-columns:1fr;}
+@media(min-width:640px){.services-grid-sub{grid-template-columns:1fr 1fr;}}
+.service-card--outline{background:transparent;}
+.service-card--outline p{margin-bottom:0;}
+
+/* ============ WHO I HELP ============ */
+.who-help{background:var(--paper);padding:6.5rem 0;border-top:1px solid var(--border);}
+.who-help h2{margin-bottom:2.2rem;max-width:600px;}
+.industry-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.2rem;}
+.industry-pill{padding:.65rem 1.2rem;border:1px solid var(--border);color:var(--stone);font-size:.92rem;transition:border-color .25s,color .25s;}
+.industry-pill:hover{border-color:var(--pine);color:var(--ink-text);}
+.who-cta{font-size:1.08rem;color:var(--ink-text);}
+.who-cta a{color:var(--gold-text);font-weight:600;border-bottom:1px solid currentColor;}
+
+/* ============ PORTFOLIO ============ */
+.portfolio{background:var(--paper);padding:6.5rem 0;border-top:1px solid var(--border);}
+.portfolio-head{max-width:640px;margin-bottom:1rem;}
+.portfolio-head h2{margin-bottom:1rem;}
+.portfolio-note{color:var(--stone);font-size:1rem;line-height:1.65;}
+.portfolio-grid{display:grid;gap:1.4rem;grid-template-columns:1fr;margin-top:2.6rem;}
+@media(min-width:700px){.portfolio-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:1080px){.portfolio-grid{grid-template-columns:repeat(3,1fr);}}
+.case-card{border:1px solid var(--border);background:var(--surface);}
+.case-card summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;}
+.case-card summary::-webkit-details-marker{display:none;}
+.case-tab{display:inline-flex;align-self:flex-start;padding:.3rem .7rem;font-size:.76rem;font-weight:600;color:var(--pine);border:1px solid var(--pine);margin:1.4rem 0 0 1.4rem;}
+.case-tab.gold{color:var(--gold-text);border-color:var(--gold);}
+.case-card h3{font-family:var(--font-display);font-weight:600;font-size:1.2rem;color:var(--ink-text);padding:1rem 1.4rem 0;}
+.case-platform{color:var(--stone);font-size:.85rem;padding:.3rem 1.4rem 0;}
+.case-objective{color:var(--stone);font-size:.93rem;line-height:1.55;padding:.9rem 1.4rem 1.3rem;border-bottom:1px solid var(--border);}
+.case-toggle-hint{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.4rem;font-weight:600;color:var(--ink-text);font-size:.92rem;}
+.case-chevron{width:16px;height:16px;color:var(--pine);flex-shrink:0;transition:transform .3s ease;}
+.case-card[open] .case-chevron{transform:rotate(180deg);}
+.case-fields{padding:0 1.4rem 1.6rem;display:grid;gap:1rem;}
+.case-field h4{font-size:.78rem;font-weight:600;color:var(--gold-text);margin-bottom:.3rem;}
+.case-field p{font-size:.9rem;color:var(--stone);line-height:1.55;}
+.case-studies-note{margin-top:3rem;border:1px dashed var(--border);padding:2.2rem;text-align:center;}
+.case-studies-note h3{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--ink-text);margin-bottom:.6rem;}
+.case-studies-note p{color:var(--stone);max-width:480px;margin:0 auto;}
+
+/* ============ HOW I WORK / TIMELINE ============ */
+.process{background:var(--paper);padding:6.5rem 0;border-top:1px solid var(--border);}
+.process-head h2{max-width:600px;}
+.timeline{position:relative;margin-top:3rem;max-width:720px;}
+.timeline-track{position:absolute;left:26px;top:6px;bottom:6px;width:1.5px;background:var(--border);}
+.timeline-fill{position:absolute;top:0;left:0;width:100%;height:0%;background:var(--pine);}
+.timeline-step{position:relative;display:flex;gap:1.6rem;padding-bottom:2.6rem;}
+.timeline-step:last-child{padding-bottom:0;}
+.step-num{position:relative;z-index:1;flex-shrink:0;width:53px;height:53px;border:1.5px solid var(--border);background:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;color:var(--stone);transition:border-color .4s,color .4s,background .4s;}
+.timeline-step.is-active .step-num{border-color:var(--pine);color:var(--paper);background:var(--pine);}
+.step-body h3{font-family:var(--font-display);font-weight:600;font-size:1.2rem;color:var(--ink-text);padding-top:.6rem;margin-bottom:.4rem;}
+.step-body p{color:var(--stone);font-size:.96rem;line-height:1.6;}
+
+/* ============ WHY WORK WITH ME ============ */
+.why{background:var(--paper);padding:6.5rem 0;border-top:1px solid var(--border);}
+.why-head h2{max-width:600px;margin-bottom:2.6rem;}
+.why-list{display:grid;grid-template-columns:1fr;gap:0;}
+@media(min-width:800px){.why-list{grid-template-columns:1fr 1fr;column-gap:3rem;}}
+.why-row{display:flex;gap:1.1rem;padding:1.7rem 0;border-bottom:1px solid var(--border);}
+.why-icon{width:23px;height:23px;color:var(--pine);flex-shrink:0;margin-top:.2rem;}
+.why-row h3{font-family:var(--font-display);font-weight:600;font-size:1.06rem;color:var(--ink-text);margin-bottom:.35rem;}
+.why-row p{color:var(--stone);font-size:.94rem;line-height:1.55;}
+
+/* ============ BUDGET ============ */
+.budget{background:var(--paper);padding:5.5rem 0;border-top:1px solid var(--border);}
+.budget-panel{max-width:680px;margin:0 auto;text-align:center;border:1px solid var(--gold);padding:3.2rem 2.4rem;background:#F7EFDF;}
+.budget-panel h2{font-size:clamp(1.7rem,2.2vw + 1rem,2.3rem);margin-bottom:1.2rem;}
+.budget-panel p{color:var(--stone);font-size:1.02rem;line-height:1.65;margin-bottom:1rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.budget-panel .btn{margin-top:1.2rem;}
+
+/* ============ FAQ ============ */
+.faq{background:var(--paper);padding:6.5rem 0;border-top:1px solid var(--border);}
+.faq-head h2{margin-bottom:2.4rem;max-width:600px;}
+.faq-list{max-width:740px;border-top:1px solid var(--border);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.5rem 0;font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--ink-text);}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-mark{width:18px;height:18px;color:var(--pine);flex-shrink:0;transition:transform .3s ease;}
+.faq-item[open] .faq-mark{transform:rotate(180deg);}
+.faq-body{padding:0 0 1.6rem;color:var(--stone);font-size:.98rem;line-height:1.65;max-width:600px;}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--ink);padding:6.5rem 0;}
+.contact-grid{display:grid;gap:3rem;grid-template-columns:1fr;}
+@media(min-width:960px){.contact-grid{grid-template-columns:.85fr 1.15fr;gap:5rem;}}
+.contact-copy h2{color:var(--paper-text);margin-bottom:1.1rem;}
+.contact-copy p{color:var(--stone-2);font-size:1.05rem;line-height:1.65;margin-bottom:2.2rem;max-width:420px;}
+.contact-form{padding-top:.3rem;}
+.contact-methods{display:flex;flex-direction:column;border-top:1px solid var(--border-dark);}
+.contact-method{display:flex;align-items:center;gap:.9rem;color:var(--paper-text);font-size:.98rem;font-weight:500;padding:1rem 0;border-bottom:1px solid var(--border-dark);transition:padding-left .3s ease,color .3s ease;}
+.contact-method:hover{padding-left:.5rem;color:var(--gold);}
+.contact-method svg{width:19px;height:19px;color:var(--gold);flex-shrink:0;}
+.field-row{display:grid;gap:1.4rem;grid-template-columns:1fr;}
+@media(min-width:560px){.field-row{grid-template-columns:1fr 1fr;}}
+.field{margin-bottom:1.5rem;}
+.field label{display:block;font-size:.82rem;font-weight:600;color:var(--stone-2);margin-bottom:.5rem;}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--border-dark);color:var(--paper-text);font-size:.98rem;padding:.6rem 0;font-family:var(--font-body);transition:border-color .3s ease;}
+.field select{cursor:pointer;}
+.field select option{background:var(--ink);color:var(--paper-text);}
+.field input::placeholder,.field textarea::placeholder{color:var(--stone-2);opacity:.7;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);}
+.field textarea{resize:vertical;min-height:100px;}
+.radio-row{display:flex;flex-wrap:wrap;gap:1.6rem;padding-top:.3rem;}
+.radio-opt{display:flex;align-items:center;gap:.55rem;cursor:pointer;color:var(--paper-text);font-size:.94rem;}
+.radio-opt input{width:16px;height:16px;accent-color:var(--gold);}
+.form-note{margin-top:1rem;font-size:.86rem;color:var(--stone-2);}
+.form-success{margin-top:1.2rem;padding:.9rem 1.1rem;border:1px solid var(--gold);color:var(--paper-text);font-size:.92rem;display:none;}
+.form-success.is-visible{display:block;}
+.form-error{margin-top:1.2rem;padding:.9rem 1.1rem;border:1px solid #C4573A;color:var(--paper-text);font-size:.92rem;display:none;}
+.form-error.is-visible{display:block;}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--ink-2);padding:4rem 0 0;border-top:1px solid var(--border-dark);}
+.footer-grid{display:grid;gap:2.6rem;grid-template-columns:1fr;padding-bottom:3rem;border-bottom:1px solid var(--border-dark);}
+@media(min-width:760px){.footer-grid{grid-template-columns:1.3fr 1fr;align-items:start;}}
+.footer-brand .logo{color:var(--paper-text);margin-bottom:.6rem;}
+.footer-brand p{color:var(--stone-2);font-size:.92rem;}
+.footer-tagline{margin-top:.3rem;}
+.social-row{display:flex;gap:.8rem;margin-top:1.4rem;}
+.social-link{width:36px;height:36px;border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center;color:var(--stone-2);transition:.3s ease;}
+.social-link:hover{border-color:var(--gold);color:var(--gold);}
+.social-link svg{width:16px;height:16px;}
+.footer-nav{display:flex;flex-wrap:wrap;gap:1.3rem 1.8rem;font-size:.9rem;}
+@media(min-width:760px){.footer-nav{justify-content:flex-end;}}
+.footer-nav a{color:var(--stone-2);}
+.footer-nav a:hover{color:var(--paper-text);}
+.footer-bottom{text-align:center;padding:1.6rem 0;font-size:.82rem;color:var(--stone-2);}
+
+/* ============ REDUCED MOTION ============ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
+  html{scroll-behavior:auto!important;}
+}
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<defs>
+<symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.3" y1="15.3" x2="21" y2="21"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,16 9,10 13,14 21,6"/><polyline points="15,6 21,6 21,12"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,3 19,6.5 19,12 12,21 5,12 5,6.5"/><polyline points="9,12 11.2,14.2 15.5,9.5"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.2M20 12a8 8 0 0 1-14 5.2"/><polyline points="17.5,3.5 17.8,6.8 14.5,7"/><polyline points="6.5,20.5 6.2,17.2 9.5,17"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="11"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="19" y1="20" x2="19" y2="14"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-9l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="16.5" height="12.5" rx="1.5"/><path d="M15 11h4.5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H15a2 2 0 0 1 0-4z"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5C12 20.5 4 14.8 4 9.7C4 6.7 6.4 4.3 9.4 4.3C10.9 4.3 12 5.3 12 5.3C12 5.3 13.1 4.3 14.6 4.3C17.6 4.3 20 6.7 20 9.7C20 14.8 12 20.5 12 20.5Z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M13.2 20v-6.4h2.1l.3-2.5h-2.4V9.5c0-.7.2-1.1 1.2-1.1h1.3V6.2c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.6v2.5h2.1V20" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></symbol>
+<symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="6,11 12,5 18,11"/></symbol>
+</defs>
+</svg>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="logo">
+      <svg class="logo-mark" viewBox="0 0 28 28"><rect width="28" height="28" rx="6" class="mark-bg"/><path class="mark-fg" d="M7 16l4-4 3 3 5-6"/><path class="mark-fg" d="M15 8h5v5"/></svg>
+      GrowWithSkills
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#how-i-work">How I Work</a>
+      <a href="#why-me">Why Work With Me</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-gold nav-cta">Get a Free Consultation</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#how-i-work">How I Work</a>
+  <a href="#why-me">Why Work With Me</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-gold">Get a Free Consultation</a>
+</nav>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg><use href="#i-arrow-up"></use></svg>
+</button>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-frame" id="heroFrame" aria-hidden="true">
+    <span class="frame-corner tl"></span>
+    <span class="frame-corner tr"></span>
+    <span class="frame-corner bl"></span>
+    <span class="frame-corner br"></span>
+    <div class="frame-reticle">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="38" stroke="#EEF0E7" stroke-opacity=".35" stroke-width="1"/>
+        <circle cx="50" cy="50" r="24" stroke="#EEF0E7" stroke-opacity=".35" stroke-width="1"/>
+        <circle cx="50" cy="50" r="2" fill="#BB8A34"/>
+        <line x1="50" y1="4" x2="50" y2="14" stroke="#EEF0E7" stroke-opacity=".35" stroke-width="1"/>
+        <line x1="50" y1="86" x2="50" y2="96" stroke="#EEF0E7" stroke-opacity=".35" stroke-width="1"/>
+        <line x1="4" y1="50" x2="14" y2="50" stroke="#EEF0E7" stroke-opacity=".35" stroke-width="1"/>
+        <line x1="86" y1="50" x2="96" y2="50" stroke="#EEF0E7" stroke-opacity=".35" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content" id="heroContent">
+      <p class="hero-kicker">Freelance Paid Advertising Specialist</p>
+      <h1 class="hero-title">Reach the Right Customers.<br>Make Every Ad Count.</h1>
+      <p class="hero-sub">I help businesses run targeted Meta and Google advertising campaigns designed around their goals, audience and available advertising budget.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-gold">Get a Free Consultation</a>
+        <a href="#portfolio" class="btn btn-line-invert">View My Work</a>
+      </div>
+      <p class="trust-line">Meta Ads <span class="dot">•</span> Facebook &amp; Instagram <span class="dot">•</span> Google Ads <span class="dot">•</span> Lead Generation</p>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><svg><use href="#i-chevron"></use></svg></div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <h2>Meet Mahi</h2>
+      <p>Hi, I'm Mahi, an independent freelance paid advertising specialist focused on Meta Ads and Google Ads.</p>
+      <p>I'm passionate about helping businesses use online advertising in a more structured and strategic way. My approach starts with understanding the business and its audience, then building campaigns around a clear objective.</p>
+      <p>I focus on campaign setup, audience research, ad testing, lead generation, performance monitoring and continuous optimization.</p>
+      <p>As I continue building my professional portfolio, my goal is to create transparent, practical and results-focused advertising solutions for businesses.</p>
+    </div>
+    <div class="about-values">
+      <h3>What I Value</h3>
+      <div class="value-row"><svg class="value-icon"><use href="#i-shield"></use></svg><span>Transparency</span></div>
+      <div class="value-row"><svg class="value-icon"><use href="#i-refresh"></use></svg><span>Continuous Learning</span></div>
+      <div class="value-row"><svg class="value-icon"><use href="#i-chart"></use></svg><span>Data-Driven Decisions</span></div>
+      <div class="value-row"><svg class="value-icon"><use href="#i-chat"></use></svg><span>Clear Communication</span></div>
+      <div class="value-row"><svg class="value-icon"><use href="#i-wallet"></use></svg><span>Budget-Conscious Strategy</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-head"><h2>What I Can Help With</h2></div>
+    <div class="services-grid">
+      <article class="service-card service-card--pine">
+        <svg class="service-icon"><use href="#i-target"></use></svg>
+        <h3>Meta Ads</h3>
+        <p>Facebook and Instagram advertising campaigns designed to reach relevant audiences and generate meaningful actions.</p>
+        <div class="tag-row">
+          <span class="tag">Campaign Setup</span>
+          <span class="tag">Audience Targeting</span>
+          <span class="tag">Lead Generation</span>
+          <span class="tag">Creative Testing</span>
+          <span class="tag">Retargeting</span>
+          <span class="tag">Campaign Monitoring</span>
+        </div>
+      </article>
+      <article class="service-card service-card--ink">
+        <svg class="service-icon"><use href="#i-search"></use></svg>
+        <h3>Google Ads</h3>
+        <p>Search advertising designed to help businesses reach people actively looking for relevant products or services.</p>
+        <div class="tag-row">
+          <span class="tag">Search Campaign Setup</span>
+          <span class="tag">Keyword Research</span>
+          <span class="tag">Ad Copy</span>
+          <span class="tag">Audience &amp; Location Targeting</span>
+          <span class="tag">Conversion-Focused Campaigns</span>
+          <span class="tag">Optimization</span>
+        </div>
+      </article>
+    </div>
+    <div class="services-grid-sub">
+      <article class="service-card service-card--outline">
+        <svg class="service-icon"><use href="#i-mail"></use></svg>
+        <h3>Lead Generation</h3>
+        <p>Build campaigns that encourage potential customers to enquire about your business through forms, websites or messaging.</p>
+      </article>
+      <article class="service-card service-card--outline">
+        <svg class="service-icon"><use href="#i-trend"></use></svg>
+        <h3>Campaign Optimization</h3>
+        <p>Monitor campaign performance and identify opportunities to improve targeting, creatives, budget allocation and overall efficiency.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="who-help" id="who-i-help">
+  <div class="container">
+    <h2>Advertising Solutions for Growing Businesses</h2>
+    <div class="industry-row">
+      <span class="industry-pill">Local Businesses</span>
+      <span class="industry-pill">Education &amp; Training</span>
+      <span class="industry-pill">Coaches &amp; Consultants</span>
+      <span class="industry-pill">Beauty &amp; Wellness Businesses</span>
+      <span class="industry-pill">Real Estate</span>
+      <span class="industry-pill">Service-Based Businesses</span>
+      <span class="industry-pill">E-commerce</span>
+      <span class="industry-pill">Personal Brands</span>
+    </div>
+    <p class="who-cta">Not sure which advertising strategy is right for your business? <a href="#contact">Let's discuss your goals.</a></p>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-head">
+      <h2>My Work</h2>
+      <p class="portfolio-note">I'm currently building my portfolio through practical projects, campaign simulations and client work. Every project shown here is clearly identified as either a practice project or real client work.</p>
+    </div>
+    <div class="portfolio-grid">
+
+      <details class="case-card">
+        <summary>
+          <span class="case-tab">Practice Campaign</span>
+          <h3>Meta Lead Generation</h3>
+          <p class="case-platform">Facebook &amp; Instagram Ads</p>
+          <p class="case-objective">Objective: Generate enquiries for an education/service-based business.</p>
+          <span class="case-toggle-hint">View Case Study <svg class="case-chevron"><use href="#i-chevron"></use></svg></span>
+        </summary>
+        <div class="case-fields">
+          <div class="case-field"><h4>Target Audience</h4><p>Parents and working professionals aged 24–45 within a defined local area, reached through interest and behavior targeting around skill development, tutoring and professional courses rather than broad demographics alone.</p></div>
+          <div class="case-field"><h4>Ad Concept</h4><p>A short-form video and static carousel highlighting the course benefits, paired with one clear call-to-action ("Enquire Now") rather than a hard sell.</p></div>
+          <div class="case-field"><h4>Campaign Structure</h4><p>A cold-audience awareness set and a separate warm-audience retargeting set, using Meta's Lead Ads format to keep the enquiry process on-platform and reduce friction.</p></div>
+          <div class="case-field"><h4>Lead-Generation Strategy</h4><p>Used Meta's native lead form to capture name, contact number and area of interest, keeping the question set short to protect completion rates.</p></div>
+          <div class="case-field"><h4>Key Learning</h4><p>Keeping the lead form short and the ad message focused on one clear offer made the campaign far easier to test and evaluate than promoting multiple services at once.</p></div>
+        </div>
+      </details>
+
+      <details class="case-card">
+        <summary>
+          <span class="case-tab">Practice Campaign</span>
+          <h3>Google Search Ads</h3>
+          <p class="case-platform">Google Search Network</p>
+          <p class="case-objective">Objective: Reach people actively searching for a service.</p>
+          <span class="case-toggle-hint">View Case Study <svg class="case-chevron"><use href="#i-chevron"></use></svg></span>
+        </summary>
+        <div class="case-fields">
+          <div class="case-field"><h4>Keyword Research</h4><p>High-intent search terms tied directly to the service, including branded, generic and "near me" style local-intent keywords, with negative keywords to filter out irrelevant traffic.</p></div>
+          <div class="case-field"><h4>Search Intent</h4><p>Prioritized transactional and commercial-intent searches (e.g. "book", "price", "near me") over purely informational searches, since these sit closer to a buying decision.</p></div>
+          <div class="case-field"><h4>Ad Copy</h4><p>Built around the specific service and a clear value proposition, testing more than one headline and description to see what resonated with searchers.</p></div>
+          <div class="case-field"><h4>Campaign Structure</h4><p>Tightly themed ad groups so each group's keywords, ad copy and landing page stayed closely aligned, supporting relevance and Quality Score.</p></div>
+          <div class="case-field"><h4>Conversion Strategy</h4><p>Traffic directed to a landing page matching the ad's promise, with a simple enquiry form or click-to-call as the primary conversion action.</p></div>
+          <div class="case-field"><h4>Key Learning</h4><p>Tight keyword-to-ad-group alignment made it much easier to see which specific search terms were relevant, rather than mixing several services under one broad group.</p></div>
+        </div>
+      </details>
+
+      <details class="case-card">
+        <summary>
+          <span class="case-tab gold">Sample Project</span>
+          <h3>Social Media Advertising Strategy</h3>
+          <p class="case-platform">Meta Ads Strategy</p>
+          <p class="case-objective">A small service-based business had a social presence but no structured paid strategy — posts reached existing followers but not new customers.</p>
+          <span class="case-toggle-hint">View Case Study <svg class="case-chevron"><use href="#i-chevron"></use></svg></span>
+        </summary>
+        <div class="case-fields">
+          <div class="case-field"><h4>Target Audience</h4><p>Local and nearby audiences matching the business's typical customer profile, layered with interest-based targeting relevant to the service category.</p></div>
+          <div class="case-field"><h4>Proposed Strategy</h4><p>A phased approach — an awareness campaign to introduce the business to a wider relevant audience, an engagement phase, then a lead-generation phase for warmed-up audiences.</p></div>
+          <div class="case-field"><h4>Creative Direction</h4><p>Simple, benefit-led creative with a consistent visual style and one clear message per ad, rather than trying to say everything at once.</p></div>
+          <div class="case-field"><h4>Lead Journey</h4><p>Ad impression → landing page or lead form → enquiry → follow-up, with each step designed to reduce friction and drop-off.</p></div>
+          <div class="case-field"><h4>Optimization Plan</h4><p>Review performance at the ad-set level after an initial testing period, pausing underperforming audiences or creatives and reallocating budget toward what shows early promise.</p></div>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="case-studies-note">
+      <h3>Client Case Studies</h3>
+      <p>Real client case studies and verified campaign results will be added as I work with businesses.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="how-i-work">
+  <div class="container">
+    <div class="process-head"><h2>A Simple, Transparent Process</h2></div>
+    <div class="timeline" id="timeline">
+      <div class="timeline-track"><div class="timeline-fill" id="timelineFill"></div></div>
+
+      <div class="timeline-step">
+        <div class="step-num">01</div>
+        <div class="step-body"><h3>Discover</h3><p>Understand your business, offer, audience and goals.</p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">02</div>
+        <div class="step-body"><h3>Research</h3><p>Research your target audience, competitors and advertising opportunities.</p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">03</div>
+        <div class="step-body"><h3>Strategize</h3><p>Build a campaign strategy based on your objective and available budget.</p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">04</div>
+        <div class="step-body"><h3>Launch</h3><p>Set up and launch the campaign across the selected advertising platform.</p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">05</div>
+        <div class="step-body"><h3>Monitor</h3><p>Track campaign performance and identify what is working and what needs improvement.</p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">06</div>
+        <div class="step-body"><h3>Optimize</h3><p>Use campaign data to improve targeting, creatives, budget allocation and overall performance.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why-me">
+  <div class="container">
+    <div class="why-head"><h2>Why Businesses Choose to Work With Me</h2></div>
+    <div class="why-list">
+      <div class="why-row">
+        <svg class="why-icon"><use href="#i-heart"></use></svg>
+        <div><h3>Personalized Attention</h3><p>As an independent freelancer, I can give your project focused attention.</p></div>
+      </div>
+      <div class="why-row">
+        <svg class="why-icon"><use href="#i-chat"></use></svg>
+        <div><h3>Clear Communication</h3><p>I believe clients should understand what is happening with their advertising.</p></div>
+      </div>
+      <div class="why-row">
+        <svg class="why-icon"><use href="#i-wallet"></use></svg>
+        <div><h3>Budget-Conscious Approach</h3><p>I work with the available advertising budget and focus on avoiding unnecessary spending.</p></div>
+      </div>
+      <div class="why-row">
+        <svg class="why-icon"><use href="#i-chart"></use></svg>
+        <div><h3>Data-Informed Optimization</h3><p>Campaign decisions should be guided by performance data rather than guesswork.</p></div>
+      </div>
+      <div class="why-row">
+        <svg class="why-icon"><use href="#i-refresh"></use></svg>
+        <div><h3>Continuous Learning</h3><p>I continuously improve my knowledge of advertising platforms, creative strategies and campaign optimization.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="budget" id="budget">
+  <div class="container">
+    <div class="budget-panel">
+      <h2>Have a Limited Advertising Budget?</h2>
+      <p>Your business does not need an enormous advertising budget to start testing online advertising. The right approach depends on your industry, audience, offer and goals.</p>
+      <p>I can help you plan a campaign around your available advertising budget and start with a structured testing approach.</p>
+      <a href="#contact" class="btn btn-gold">Discuss Your Budget</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-head"><h2>Frequently Asked Questions</h2></div>
+    <div class="faq-list">
+
+      <details class="faq-item" name="faq-group">
+        <summary>What advertising platforms do you work with?<svg class="faq-mark"><use href="#i-chevron"></use></svg></summary>
+        <div class="faq-body"><p>I currently focus on Meta Ads, including Facebook and Instagram, and Google Ads.</p></div>
+      </details>
+
+      <details class="faq-item" name="faq-group">
+        <summary>Do I need a large advertising budget?<svg class="faq-mark"><use href="#i-chevron"></use></svg></summary>
+        <div class="faq-body"><p>Not necessarily. The appropriate budget depends on your business and goals. I can help create a strategy around your available budget.</p></div>
+      </details>
+
+      <details class="faq-item" name="faq-group">
+        <summary>Do you guarantee leads or sales?<svg class="faq-mark"><use href="#i-chevron"></use></svg></summary>
+        <div class="faq-body"><p>No. Advertising performance depends on many factors including the offer, market, audience, creative, landing page and budget. I focus on building, monitoring and optimizing campaigns based on data.</p></div>
+      </details>
+
+      <details class="faq-item" name="faq-group">
+        <summary>Can you manage my Facebook and Instagram advertising?<svg class="faq-mark"><use href="#i-chevron"></use></svg></summary>
+        <div class="faq-body"><p>Yes. Meta Ads can be used to advertise across Facebook and Instagram depending on the campaign setup and available placements.</p></div>
+      </details>
+
+      <details class="faq-item" name="faq-group">
+        <summary>Do you work with small businesses?<svg class="faq-mark"><use href="#i-chevron"></use></svg></summary>
+        <div class="faq-body"><p>Yes. I'm open to working with businesses that want to explore paid advertising and have a clear product or service to promote.</p></div>
+      </details>
+
+      <details class="faq-item" name="faq-group">
+        <summary>How do I get started?<svg class="faq-mark"><use href="#i-chevron"></use></svg></summary>
+        <div class="faq-body"><p>Send an enquiry through the contact form. I'll learn about your business, goals and advertising requirements before discussing the next steps.</p></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <h2>Let's Talk About Your Business</h2>
+      <p>Have a product, service or business you want to promote online? Tell me what you're working on and what you want to achieve.</p>
+      <div class="contact-methods">
+        <a href="https://wa.me/916394908210" class="contact-method"><svg><use href="#i-phone"></use></svg> WhatsApp — +91 63949 08210</a>
+        <a href="mailto:vmahi3832@gmail.com" class="contact-method" id="emailContact"><svg><use href="#i-mail"></use></svg> <span class="contact-method-text">vmahi3832@gmail.com</span></a>
+        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&amp;utm_medium=copy_link&amp;utm_content=mwqj5u0" class="contact-method"><svg><use href="#i-instagram"></use></svg> Instagram — @growwithskills</a>
+        <a href="https://www.facebook.com/share/19TfCSCBDf/" class="contact-method"><svg><use href="#i-facebook"></use></svg> Facebook — GrowWithSkills</a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="field-row">
+        <div class="field"><label for="f-name">Full Name</label><input id="f-name" name="name" type="text" required></div>
+        <div class="field"><label for="f-business">Business Name</label><input id="f-business" name="business" type="text"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="f-email">Email Address</label><input id="f-email" name="email" type="email" required></div>
+        <div class="field"><label for="f-whatsapp">WhatsApp Number</label><input id="f-whatsapp" name="whatsapp" type="tel" required></div>
+      </div>
+      <div class="field"><label for="f-website">Business Website / Instagram</label><input id="f-website" name="website" type="text" placeholder="yoursite.com or @yourhandle"></div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-type">Business Type</label>
+          <select id="f-type" name="businessType">
+            <option>Local Business</option>
+            <option>Education &amp; Training</option>
+            <option>Coaching / Consulting</option>
+            <option>Beauty &amp; Wellness</option>
+            <option>Real Estate</option>
+            <option>Service-Based Business</option>
+            <option>E-commerce</option>
+            <option>Personal Brand</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-budget">Approximate Advertising Budget</label><input id="f-budget" name="budget" type="text" placeholder="e.g. ₹15,000 – ₹50,000 / month"></div>
+      </div>
+      <div class="field">
+        <label>Advertising Platform</label>
+        <div class="radio-row">
+          <label class="radio-opt"><input type="radio" name="platform" value="Meta Ads" checked> Meta Ads</label>
+          <label class="radio-opt"><input type="radio" name="platform" value="Google Ads"> Google Ads</label>
+          <label class="radio-opt"><input type="radio" name="platform" value="Both"> Both</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-goal">Main Goal</label>
+        <select id="f-goal" name="goal" required>
+          <option>Generate Leads</option>
+          <option>Get Website Traffic</option>
+          <option>Increase Enquiries</option>
+          <option>Increase Sales</option>
+          <option>Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" required></textarea></div>
+      <button type="submit" class="btn btn-gold btn-block">Request a Free Consultation</button>
+      <p class="form-note">Submitting sends your enquiry straight to Mahi — no email app required.</p>
+      <p class="form-success" id="formSuccess">Thanks — your enquiry is on its way. Mahi will be in touch soon. You can also reach her directly at vmahi3832@gmail.com.</p>
+      <p class="form-error" id="formError">Please check the highlighted field above — something's missing or not quite right (e.g. a valid email address), so it wasn't sent yet.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="logo"><svg class="logo-mark" viewBox="0 0 28 28" style="display:inline-block;vertical-align:middle;margin-right:.5rem;"><rect width="28" height="28" rx="6" class="mark-bg"/><path class="mark-fg" d="M7 16l4-4 3 3 5-6"/><path class="mark-fg" d="M15 8h5v5"/></svg>GrowWithSkills</p>
+        <p>Freelance Paid Advertising Specialist</p>
+        <p class="footer-tagline">Meta Ads • Google Ads • Lead Generation</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&amp;utm_medium=copy_link&amp;utm_content=mwqj5u0" class="social-link" aria-label="Instagram"><svg><use href="#i-instagram"></use></svg></a>
+          <a href="https://www.facebook.com/share/19TfCSCBDf/" class="social-link" aria-label="Facebook"><svg><use href="#i-facebook"></use></svg></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <!-- TODO: link to a real Privacy Policy page -->
+        <a href="#">Privacy Policy</a>
+        <!-- TODO: link to a real Terms page -->
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+    <p class="footer-bottom">© 2026 GrowWithSkills — Mahi Verma. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- consolidated, rAF-throttled scroll updates ---------- */
+  var scrollUpdaters = [];
+  var ticking = false;
+  function runUpdaters(){
+    for(var i=0;i<scrollUpdaters.length;i++){
+      try{ scrollUpdaters[i](); }catch(e){ /* one bad updater should not break the rest */ }
+    }
+    ticking = false;
+  }
+  function requestTick(){
+    if(!ticking){ window.requestAnimationFrame(runUpdaters); ticking = true; }
+  }
+  window.addEventListener('scroll', requestTick, {passive:true});
+  window.addEventListener('resize', requestTick);
+
+  /* Header background swap */
+  var header = document.getElementById('siteHeader');
+  if(header){
+    scrollUpdaters.push(function(){
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  }
+
+  /* Top scroll-progress line */
+  var progressBar = document.getElementById('scrollProgress');
+  if(progressBar){
+    scrollUpdaters.push(function(){
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      progressBar.style.width = (max > 0 ? (window.scrollY/max)*100 : 0) + '%';
+    });
+  }
+
+  /* Hero viewfinder-frame scroll effect: the one signature 3D moment.
+     Corners pull outward and fade, content recedes, as the hero scrolls past. */
+  var hero = document.querySelector('.hero');
+  var heroContent = document.getElementById('heroContent');
+  var frameCorners = document.querySelectorAll('#heroFrame .frame-corner');
+  if(hero){
+    scrollUpdaters.push(function(){
+      var h = hero.offsetHeight || window.innerHeight;
+      var p = Math.max(0, Math.min(1, window.scrollY / (h * 0.85)));
+      frameCorners.forEach(function(c){
+        var dx = (c.classList.contains('tl') || c.classList.contains('bl')) ? -1 : 1;
+        var dy = (c.classList.contains('tl') || c.classList.contains('tr')) ? -1 : 1;
+        c.style.transform = 'translate(' + (dx*p*42).toFixed(1) + 'px,' + (dy*p*42).toFixed(1) + 'px)';
+        c.style.opacity = String(Math.max(0, 1 - p*1.3));
+      });
+      if(heroContent){
+        heroContent.style.transform = 'translateY(' + (p*46).toFixed(1) + 'px)';
+        heroContent.style.opacity = String(Math.max(0, 1 - p*1.1));
+      }
+    });
+  }
+
+  /* How I Work — scroll-linked progress line + active step */
+  var timelineEl = document.getElementById('timeline');
+  var timelineFill = document.getElementById('timelineFill');
+  var timelineSteps = document.querySelectorAll('.timeline-step');
+  if(timelineEl && timelineFill){
+    scrollUpdaters.push(function(){
+      var rect = timelineEl.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var pct = (vh*0.7 - rect.top) / rect.height;
+      pct = Math.max(0, Math.min(1, pct));
+      timelineFill.style.height = (pct*100) + '%';
+      timelineSteps.forEach(function(step){
+        step.classList.toggle('is-active', step.getBoundingClientRect().top < vh*0.7);
+      });
+    });
+  }
+
+  /* Back-to-top visibility */
+  var backToTop = document.getElementById('backToTop');
+  if(backToTop){
+    scrollUpdaters.push(function(){
+      backToTop.classList.toggle('is-visible', window.scrollY > 700);
+    });
+    backToTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  requestTick();
+
+  /* ---------- mobile menu ---------- */
+  var menuToggle = document.getElementById('menuToggle');
+  var navMobile = document.getElementById('navMobile');
+  if(menuToggle && navMobile){
+    function closeMenu(){
+      navMobile.classList.remove('is-open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    }
+    function openMenu(){
+      navMobile.classList.add('is-open');
+      menuToggle.classList.add('is-open');
+      menuToggle.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+    }
+    menuToggle.addEventListener('click', function(){
+      navMobile.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+    navMobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+  }
+
+  /* ---------- subtle custom cursor (pointer devices only) ---------- */
+  if(window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+    var dot = document.getElementById('cursorDot');
+    if(dot){
+      dot.classList.add('is-active');
+      var mx=0, my=0, cx=0, cy=0;
+      document.addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; });
+      (function follow(){
+        cx += (mx-cx)*0.25; cy += (my-cy)*0.25;
+        dot.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%)';
+        window.requestAnimationFrame(follow);
+      })();
+      document.querySelectorAll('a, button, summary').forEach(function(el){
+        el.addEventListener('mouseenter', function(){ dot.classList.add('is-hover'); });
+        el.addEventListener('mouseleave', function(){ dot.classList.remove('is-hover'); });
+      });
+    }
+  }
+
+  /* ---------- email contact: copy-to-clipboard fallback ----------
+     mailto: links only do something if the browser has a mail app
+     registered to handle them. That's often not true inside sandboxed
+     previews (and sometimes on desktop browsers generally), so clicking
+     can silently do nothing even though the link itself is correct.
+     This copies the address too, so the click always produces a usable
+     result regardless of whether a mail client is set up. */
+  var emailContact = document.getElementById('emailContact');
+  if(emailContact){
+    emailContact.addEventListener('click', function(){
+      var textEl = emailContact.querySelector('.contact-method-text');
+      if(!textEl || !navigator.clipboard) return;
+      var original = textEl.textContent;
+      navigator.clipboard.writeText('vmahi3832@gmail.com').then(function(){
+        textEl.textContent = 'Copied to clipboard!';
+        setTimeout(function(){ textEl.textContent = original; }, 2000);
+      }).catch(function(){ /* clipboard unavailable (e.g. non-secure context); mailto: still attempts to fire normally */ });
+    });
+  }
+
+  /* ---------- contact form ----------
+     Submissions are sent to a small Google Apps Script backend (see the
+     .gs file Claude provided separately) which builds a branded A4 PDF
+     of the enquiry and emails it to Mahi automatically — free, using her
+     own Google account, no server to maintain.
+
+     PASTE YOUR DEPLOYED WEB APP URL BELOW once you've set it up: */
+  var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzgnzVfxQs_c-Ef8kUznTFgur3A6s8VVNXhv1MD59t04r615j5EN3D0hTNi1BZ1HODz/exec';
+
+  var form = document.getElementById('contactForm');
+  var formSuccess = document.getElementById('formSuccess');
+  var formError = document.getElementById('formError');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(formSuccess){ formSuccess.classList.remove('is-visible'); }
+      if(formError){ formError.classList.remove('is-visible'); }
+      if(typeof form.reportValidity === 'function' && !form.reportValidity()){
+        if(formError){ formError.classList.add('is-visible'); }
+        return;
+      }
+      var data = new FormData(form);
+      var get = function(key){ var v = data.get(key); return (v && String(v).trim()) ? String(v).trim() : '-'; };
+      var payload = {
+        name: get('name'), business: get('business'), email: get('email'),
+        whatsapp: get('whatsapp'), website: get('website'), businessType: get('businessType'),
+        platform: get('platform'), goal: get('goal'), budget: get('budget'), message: get('message')
+      };
+
+      if(GAS_ENDPOINT && GAS_ENDPOINT.indexOf('PASTE_YOUR') === -1){
+        /* Backend connected: fire-and-forget POST. mode:'no-cors' means the
+           browser can't read the response, so success is shown optimistically
+           — this is normal for this pattern and the email still sends. */
+        fetch(GAS_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        }).catch(function(){ /* request still attempts to send even if this rejects */ });
+      } else {
+        /* Backend not connected yet: fall back to opening the visitor's own
+           email app so nothing is lost while setup is in progress. */
+        var lines = [
+          'Full Name: ' + payload.name, 'Business Name: ' + payload.business, 'Email: ' + payload.email,
+          'WhatsApp: ' + payload.whatsapp, 'Website / Instagram: ' + payload.website,
+          'Business Type: ' + payload.businessType, 'Advertising Platform: ' + payload.platform,
+          'Main Goal: ' + payload.goal, 'Approximate Budget: ' + payload.budget,
+          '', 'Message:', payload.message
+        ].join('\n');
+        var subject = encodeURIComponent('New enquiry from ' + payload.name + (payload.business !== '-' ? ' - ' + payload.business : ''));
+        window.location.href = 'mailto:vmahi3832@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(lines);
+      }
+
+      if(formSuccess){ formSuccess.classList.add('is-visible'); }
+      form.reset();
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
